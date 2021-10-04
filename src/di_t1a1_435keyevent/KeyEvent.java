@@ -29,7 +29,7 @@ public class KeyEvent extends Application {
         
         //Creamos tTexto, creamos el evento y lo añadimos al root
         tTexto = new Text(20,20,"A");
-        
+        //Añadimos tTexto al root
         root.getChildren().add(tTexto);
         
         //Creamos la escena
@@ -37,23 +37,28 @@ public class KeyEvent extends Application {
         
         //Creamos el evento relacionado con la escena
         scene.setOnKeyPressed(e -> {
-                        
+                  
+            //Caso KeyCode sea la tecla hacia arriba
             if(e.getCode().equals(KeyCode.UP))
             {
                 tTexto.setY(tTexto.getY() - 10);
             }
+            //Caso KeyCode sea la tecla hacia abajo
             else if(e.getCode().equals(KeyCode.DOWN))
             {
                 tTexto.setY(tTexto.getY() + 10);
             }
+            //Caso KeyCode sea la tecla hacia la derecha
             else if(e.getCode().equals(KeyCode.RIGHT))
             {
                 tTexto.setX(tTexto.getX() + 10);
             }
+            //Caso KeyCode sea la tecla hacia la izquierda
             else if(e.getCode().equals(KeyCode.LEFT))
             {
                 tTexto.setX(tTexto.getX() - 10);
             }
+            //Caso de que la tecla sea un dígito o una letra
             else if(e.getCode().isDigitKey() || e.getCode().isLetterKey())
             {
                 tTexto.setText(e.getText().toUpperCase());
