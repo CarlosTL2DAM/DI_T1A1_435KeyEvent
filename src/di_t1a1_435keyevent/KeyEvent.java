@@ -62,8 +62,6 @@ public class KeyEvent extends Application {
             else if(e.getCode().isDigitKey() || e.getCode().isLetterKey())
             {
                 tTexto.setText(e.getText().toUpperCase());
-                
-                //tTexto.setText(tTexto.getText() + e.getText().toUpperCase());
             }
         });
         
